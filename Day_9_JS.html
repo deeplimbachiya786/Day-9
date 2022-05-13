@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title> JavaScript Demo </title>
+        <script type="text/javascript">
+            function demoInternalAlert(){
+                alert("internal alret.") ;
+            }
+            function demoInternalConfirm(){
+                if(confirm("are you sure?")){
+                    alert("y");
+                }
+                else{
+                    alert("N");
+                }
+            }
+            function demoInternalPrompt(){
+                var fName=prompt("enter your frist name here....");
+                var lName=prompt("enter your last name here..");
+                alert(fName+ " " +lName);
+            }
+            function demoExternalAlert(){
+                alert("internal alret.");
+            }
+            function demoExternalConfirm(){
+                if(confirm("are you sure?")){
+                    alert("y");
+                }
+                else{
+                    alert("N");
+                }
+            }
+            function demoExternalPrompt(){
+                var fName=prompt("enter your frist name here....");
+                var lName=prompt("enter your last name here..");
+                alert(fName+ " " +lName);
+            }
+            function backgroundImage(){
+                document.body.style.backgroundImage="url(https://th.bing.com/th/id/OIP.tTzOygaXYJUciGkWLqVf7wHaEo?pid=ImgDet&rs=1)";
+            }
+            function divBGGray(){
+                document.getElementById("D1").style.backgroundColor="Gray";
+            }
+            function bodyBGDynamic(){
+                document.body.style.background=prompt("enter color here..");
+            }
+            function divBGDynamic(){
+                document.getElementById("D1").style.backgroundColor=prompt("enter color here..")
+            }
+            function bodyBGCP1(){
+				document.body.style.backgroundColor=document.getElementById("CP1").value;
+			}
+			function divBGCP2(){
+				document.getElementById("D1").style.backgroundColor=document.getElementById("CP2").value;
+			}
+		</script>
+		<script src="scripts/demo.js" type="text/javascript"></script>
+		<style type="text/css">
+			body{background-color: rgb(78, 68, 68);}
+            #b1{display:inline block;width:150px; float: left; border-radius:7px;}
+            #b2{display:inline block;width:150px; float: left; border-radius:7px;}
+            #b3{display:inline block;width:150px; float: left; border-radius:7px;}
+            #b4{display:inline block;width:150px; float: left; border-radius:7px;}
+            #b5{display:inline block;width:150px; float: left; border-radius:7px;}
+            #b6{display:inline block;width:150px; float: left; border-radius:7px;}
+			div{box-shadow:7px 7px 10px grey;background-color: rgb(233, 29, 29);border-radius:10px;height: 300px;width: 300px;}
+        </style>
+    </head>
+    <body>
+        <div id="D1" align="center" style="margin:0 auto">
+            <h2>Hello Friends</h2>
+        </div>
+        <hr/>
+        <input id="b1" type="button" value="Alert Inline" onclick="alert('hello guys')" />&nbsp;&nbsp;
+        <input id="b1" type="button" value="Confirm Inline" onclick="confirm('are you sure?')" /> &nbsp;&nbsp;
+        <input id="b1" type="button" value="Prompt Inline" onclick="prompt('Enter Firstname here...')" /> &nbsp;&nbsp;
+        <hr/>
+        <input id="b1" type="button" value="Alert Internal" onclick="demoInternalAlert()" />&nbsp;&nbsp;
+        <input id="b1" type="button" value="Confirm Internal" onclick="demoInternalConfirm()" /> &nbsp;&nbsp;
+        <input id="b1" type="button" value="Prompt Internal" onclick="demoInternalPrompt()" /> &nbsp;&nbsp;
+        <hr/>
+        <input id="b1" type="button" value="Alert External" onclick="demoExternalAlert()" />&nbsp;&nbsp;
+        <input id="b1" type="button" value="Confirm External" onclick="demoExternalConfirm()" /> &nbsp;&nbsp;
+        <input id="b1" type="button" value="Prompt External" onclick="demoExternalPrompt()" /> &nbsp;&nbsp;
+        <hr/>
+        <input id="b1" type="button" value="Body Bg Image" onclick="backgroundImage()" />&nbsp;&nbsp;
+        <input id="b1" type="button" value="Body Bg Gray" onclick="divBGGray()" /> &nbsp;&nbsp;
+        
+        <hr/>
+        <input id="b1" type="button" value="Body Bg Prompt" onclick="bodyBGDynamic()" />&nbsp;&nbsp;
+        <input id="b1" type="button" value="Body Bg Prompt" onclick="divBGDynamic()" /> &nbsp;&nbsp;
+        
+        <hr/>
+        <input id="b6" type="color" id="CP1" onclick="bodyBGCP1()" />&nbsp;&nbsp;
+        <input id="b6" type="color" id="CP2" onclick="divBGCP2()" /> &nbsp;&nbsp;
+    </body>
+</html>
